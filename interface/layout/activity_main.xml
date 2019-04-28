@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:andrdroid="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.kamarou.topquiz.Controleur.MainActivity"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="100dp"
+        android:id="@+id/linearLayout3">
+
+        <Button
+            android:id="@+id/activity_main_btnVioance"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@android:color/holo_orange_light"
+            android:text="V" />
+
+        <Button
+            android:id="@+id/activity_main_btnViSexuel"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@android:color/holo_orange_light"
+            android:text="V" />
+
+        <Button
+            android:id="@+id/activity_main_btnVol"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="@android:color/holo_orange_light"
+            android:text="A" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="200dp"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/activity_main_btnMariagePrecoce"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="VO" />
+
+        <Button
+            android:id="@+id/activity_main_btnExicision"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="M" />
+
+        <Button
+            android:id="@+id/activity_main_btnTraite"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+
+            android:background="@android:color/holo_blue_dark"
+            android:text="M" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="300dp"
+        android:id="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/activity_main_btnKidnapind"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@android:color/holo_green_dark"
+            android:text="s" />
+
+        <Button
+            android:id="@+id/activity_main_btnDescolarisation"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@android:color/holo_green_dark"
+            android:text="ac" />
+
+        <Button
+            android:id="@+id/activity_main_btnDiscrimination"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginRight="18dp"
+            android:background="@android:color/holo_green_dark"
+            android:text="ac" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_main_btnAttaque"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:background="@android:color/holo_green_dark"
+        android:text="ac" />
+
+
+</RelativeLayout>

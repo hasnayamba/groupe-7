@@ -1,0 +1,58 @@
+// On initialise la latitude et la longitude du Niamey (centre de la carte)
+var lat = 13.521389;
+var lon = 2.105278;
+//var lat = 13.3043 ;
+//var lon = 2.339;
+var macarte = null;
+// Fonction d'initialisation de la carte
+function initMap() {
+	// Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
+    macarte = L.map('map').setView([lat, lon], 11);
+    // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+    // Il est toujours bien de laisser le lien vers la source des données
+    attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+    minZoom: 1,
+    maxZoom: 20
+    }).addTo(macarte);
+
+}
+window.onload = function(){
+	// Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
+	initMap(); 
+	// mettre a jour la liste des variable a chaque 2s
+	var marker = L.marker([lat, lon]).addTo(macarte);
+    
+	function charger(){
+        setTimeout( function(){
+            // on lance une requête AJAX
+            $.get('index.php',function(data){
+                //console.log(data);
+
+                // decouper data en des mots
+                 var coordonne = data.split(' ');
+                 var len=coordonne.length;
+                 
+                 //for(var i=0; i<len; i++){
+                var i=0;
+                 while ( i<len){
+                    //var late;
+                    //var long;
+                    chaine= coordonne[i];
+                    lat=parseFloat(chaine);
+                    chaine= coordonne[i+1];
+                    lon=parseFloat(chaine);
+                    //var marker = L.marker([lat, lon]).addTo(macarte);
+                    //var marker = L.marker([13.7000000 ,3.6833330]).addTo(macarte);
+                    i=i+2;
+                 }
+                 //var marker = L.marker([lat, lon]).addTo(macarte);		
+            	});
+            charger(); // on relance la fonction
+        }, 1000); // on exécute le chargement toutes les 5 secondes
+    }
+
+    charger();
+    
+   
+};
